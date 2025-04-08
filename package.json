@@ -1,5 +1,7 @@
 {
+  "name": "limfs-static",
+  "version": "1.0.0",
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "echo \"No build step required\""
   }
 }

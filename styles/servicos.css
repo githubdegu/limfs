@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap');
+
+#servicos {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+#servicos .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+#servicos h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: var(--primary-blue);
+}
+
+#servicos p {
+  font-size: 1.1em;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 80px;
+}
+
+.servico-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 40px 30px;
+  width: 100%;
+  background-color: var(--cor-fundo);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: var(--cor-texto);
+  text-align: center;
+  will-change: transform;
+}
+
+@media (max-width: 600px) {
+  .servico-item {
+    padding: 30px 20px;
+  }
+}
+
+.servico-item:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-fundo);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: none;
+}
+
+.servico-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--cor-primaria);
+  text-align: center;
+  position: relative;
+}
+
+.servico-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--cor-texto);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  #servicos h2 {
+    font-size: 2rem;
+  }
+  
+  .servico-item h3 {
+    font-size: 1.5rem;
+  }
+  
+  .servico-item p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,6 +1,14 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
+}
+
+:root {
+  --padding-padrao: 20px;
+  --font-size-titulo: 3rem;
+  --primary-blue: #1E386A;
+  --cor-botao-hover: #0056b3;
 }
 
 .hero {
@@ -46,12 +54,12 @@ html, body {
   margin: 0 auto;
   text-align: center;
   color: #fff;
-  padding: 20px;
+  padding: var(--padding-padrao);
   animation: fadeIn 1.5s ease-out forwards;
 }
 
 .hero h2 {
-  font-size: 3rem;
+  font-size: var(--font-size-titulo);
   margin-bottom: 20px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
@@ -123,6 +131,7 @@ html, body {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

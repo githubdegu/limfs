@@ -2,9 +2,18 @@ DirectoryIndex index.html
 Options +FollowSymLinks
 RewriteEngine On
 
+# Redirecionar a raiz para a página inicial na pasta 'pages'
+RewriteRule ^$ /pages/index.html [L]
+
+# Redirecionar URLs como /sobre/, /servicos/, /contato/ para as páginas correspondentes
+RewriteRule ^sobre/?$ /pages/sobre.html [L]
+RewriteRule ^servicos/?$ /pages/servicos.html [L]
+RewriteRule ^contato/?$ /pages/contato.html [L]
+
+# Preservar o acesso a recursos como CSS, JavaScript, imagens, etc.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^/]+)/?$ $1/index.html [L]
+RewriteRule ^(.*)$ /pages/$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^(.*[^/])$ $1/ [L,R=301]
